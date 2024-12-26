@@ -1584,7 +1584,7 @@ local AutoTakeNamiQuests = MakeCheckbox(Farm_QuestsSubPage, 'Auto Take Nami Ques
 
 ---------------------------------------------------------------------
 
-AP_PositionSettings = MakeNewSubPage('AutoPlay+', 'Left', 0.489, 0.025, 0.02, 0.039)
+AP_PositionSettings = MakeNewSubPage('AutoPlay', 'Left', 0.489, 0.025, 0.02, 0.039)
 MakeTitle(AP_PositionSettings, "AutoPlace Positions", 0.083)
 AP_PositionButtons = {}
 for unitOrder = 1, 6 do
@@ -1594,14 +1594,14 @@ ShowPoints = MakeLargeButton(AP_PositionSettings, 'Show Positions', 0.125)
 
 -----------------------
 
-AP_SettingsSubPage = MakeNewSubPage('AutoPlay+', 'Left', 0.221, 0.06, 0.05, 0.045)
+AP_SettingsSubPage = MakeNewSubPage('AutoPlay', 'Left', 0.221, 0.06, 0.05, 0.045)
 MakeTitle(AP_SettingsSubPage, 'Auto Place Units', 0.193)
 AutoPlaceWave = MakeTextBox(AP_SettingsSubPage, 'Wave', 'Start On Wave:', 0.48)
 AutoPlaceTurnOn = MakeCheckbox(AP_SettingsSubPage, 'Auto Place Units', 0.16)
 
 -----------------------
 
-AP_AutoSellUnitsSubPage = MakeNewSubPage('AutoPlay+', 'Left', 0.221, 0.06, 0.05, 0.045)
+AP_AutoSellUnitsSubPage = MakeNewSubPage('AutoPlay', 'Left', 0.221, 0.06, 0.05, 0.045)
 MakeTitle(AP_AutoSellUnitsSubPage, 'Auto Sell Units', 0.193)
 AutoSellUnitsWave = MakeTextBox(AP_AutoSellUnitsSubPage, 'Wave', 'Sell On Wave:', 0.48)
 AutoSellUnits = MakeCheckbox(AP_AutoSellUnitsSubPage, 'Auto Sell Units', 0.16)
@@ -1609,14 +1609,14 @@ AutoSellUnits = MakeCheckbox(AP_AutoSellUnitsSubPage, 'Auto Sell Units', 0.16)
 
 -----------------------
 
-AP_AutoSellFarmsSubPage = MakeNewSubPage('AutoPlay+', 'Left', 0.221, 0.06, 0.05, 0.045)
+AP_AutoSellFarmsSubPage = MakeNewSubPage('AutoPlay', 'Left', 0.221, 0.06, 0.05, 0.045)
 MakeTitle(AP_AutoSellFarmsSubPage, 'Auto Sell Farms', 0.193)
 AutoSellFarmsWave = MakeTextBox(AP_AutoSellFarmsSubPage, 'Wave', 'Sell On Wave:', 0.48)
 AutoSellFarms = MakeCheckbox(AP_AutoSellFarmsSubPage, 'Auto Sell Farms', 0.16)
 
 -----------------------
 
-AP_LeaveOnWaveSubPage = MakeNewSubPage('AutoPlay+', 'Left', 0.221, 0.06, 0.05, 0.045)
+AP_LeaveOnWaveSubPage = MakeNewSubPage('AutoPlay', 'Left', 0.221, 0.06, 0.05, 0.045)
 MakeTitle(AP_LeaveOnWaveSubPage, 'Auto Leave', 0.193)
 AutoLeaveWaveON = MakeTextBox(AP_LeaveOnWaveSubPage, 'Wave', 'Leave On Wave:', 0.48)
 AutoLeaveWave = MakeCheckbox(AP_LeaveOnWaveSubPage, 'Auto Leave', 0.16)
@@ -1624,7 +1624,7 @@ AutoLeaveWave = MakeCheckbox(AP_LeaveOnWaveSubPage, 'Auto Leave', 0.16)
 -----------------------
 
 
-AP_AutoUpgradeSubPage = MakeNewSubPage('AutoPlay+', 'Right', 0.281, 0.06, 0.03, 0.045)
+AP_AutoUpgradeSubPage = MakeNewSubPage('AutoPlay', 'Right', 0.281, 0.06, 0.03, 0.045)
 MakeTitle(AP_AutoUpgradeSubPage, 'Auto Upgrade Units', 0.155)
 AutoUpgradeStartWave = MakeTextBox(AP_AutoUpgradeSubPage, 'Wave', 'Start On Wave:', 0.38)
 FocusOnFarmAutoPlace = MakeCheckbox(AP_AutoUpgradeSubPage, 'Focus On Farms', 0.125)
@@ -1632,7 +1632,7 @@ AutoUpgradeCheckBox = MakeCheckbox(AP_AutoUpgradeSubPage, 'Auto Upgrade', 0.125)
 
 -----------------------
 
-AP_PlaceCapSubPage = MakeNewSubPage('AutoPlay+', 'Right', 0.418, 0.03, 0.025, 0.047)
+AP_PlaceCapSubPage = MakeNewSubPage('AutoPlay', 'Right', 0.418, 0.03, 0.025, 0.047)
 MakeTitle(AP_PlaceCapSubPage, 'AutoPlace Cap', 0.096)
 AP_PlaceCapSliders = {}
 for sliderNum = 1,6  do
@@ -1641,7 +1641,7 @@ end
 
 -----------------------
 
-AP_UpgradeCapSubPage = MakeNewSubPage('AutoPlay+', 'Right', 0.418, 0.03, 0.03, 0.047)
+AP_UpgradeCapSubPage = MakeNewSubPage('AutoPlay', 'Right', 0.418, 0.03, 0.03, 0.047)
 MakeTitle(AP_UpgradeCapSubPage, 'AutoUpgrade Cap', 0.096)
 AP_UpgradeCapSliders = {}
 for sliderNum = 1,6  do
