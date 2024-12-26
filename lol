@@ -1471,6 +1471,7 @@ local PlaceInRedZones = MakeCheckbox(Main_MainSubPage, 'Place In Red Zones', 0.0
 local HideMap = MakeCheckbox(Main_MainSubPage, 'Hide Map', 0.056)
 local TPToLobby = MakeLargeButton(Main_MainSubPage, 'Teleport To Lobby', 0.103)
 local RedeemCodes = MakeLargeButton(Main_MainSubPage, 'Redeem All Codes', 0.103)
+local Discordsv = MakeLargeButton(Main_MainSubPage, 'Discord Server', 0.103)
 
 -----------------------
 
@@ -2355,7 +2356,7 @@ TestWebhook.MouseButton1Click:Connect(function()
 	local headers = {["content-type"] = "application/json"}
 	local request = http_request or request or HttpPost or syn.request or http.request
 	local dataSend = {Url = discordUrl, Body = data, Method = "POST", Headers = headers}
-	warn("Sending test webhook...")
+	warn("Skull Hub | Sending test webhook...")
 
 	pcall(function() request(dataSend) end)
 
@@ -4301,6 +4302,11 @@ RedeemCodes.MouseButton1Click:Connect(function()
 	end
 end)
 
+Discordsv.MouseButton1Click:Connect(function()
+	setclipboard("https://discord.gg/NxHT2rSynR")
+	print('Skull Hub | Copied Discord Invite Link!')
+end)
+
 local function getMapName (result)
 	local mapName = result
 
@@ -4515,7 +4521,7 @@ local function webhook ()
 	local headers = {["content-type"] = "application/json"}
 	local request = http_request or request or HttpPost or syn.request or http.request
 	local dataSend = {Url = webhookUrl, Body = data, Method = "POST", Headers = headers}
-	warn("Sending Result Webhook...")
+	warn("Skull Hub | Sending Result Webhook...")
 
 	pcall(function() request(dataSend) end)
 
