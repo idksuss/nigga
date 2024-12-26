@@ -1449,7 +1449,7 @@ end
 
 MakeNewPage('Main', 0.117)
 MakeNewPage('Farm', 0.117)
-MakeNewPage('AutoPlay+', 0.225)
+MakeNewPage('AutoPlay', 0.225)
 MakeNewPage('Macro', 0.14)
 MakeNewPage('Misc', 0.1)
 
