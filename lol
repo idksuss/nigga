@@ -7,8 +7,8 @@ if game.PlaceId == 8304191830 then
 	repeat task.wait() until game.ReplicatedStorage.packages:FindFirstChild("assets")
 	repeat task.wait() until game.ReplicatedStorage.packages:FindFirstChild("StarterGui")
 end
-if getgenv().UltraHubExecuted then return end
-getgenv().UltraHubExecuted = true
+if getgenv().SkullHubExecuted then return end
+getgenv().SkullHubExecuted = true
 
 -- SERVICES
 local HttpService = game:GetService('HttpService')
@@ -489,7 +489,7 @@ PGUI = game.Players.LocalPlayer:WaitForChild('PlayerGui')
 
 -- MAKING GUI
 ScreenGui = Instance.new('ScreenGui', game.CoreGui)
-ScreenGui.Name = 'Ultra Hub'
+ScreenGui.Name = 'Skull Hub'
 ScreenGui.ResetOnSpawn = false
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
 ScreenGui.Enabled = true
@@ -611,7 +611,7 @@ HubTitle.ZIndex = 10001
 HubTitle.Font = Enum.Font.GothamBlack
 HubTitle.TextColor3 = Color3.fromRGB(255,255,255)
 HubTitle.TextScaled = true
-HubTitle.Text = 'SkullHub - BETA'
+HubTitle.Text = 'Skull Hub - Anime Adventures'
 
 
 TopBarSizes = {
@@ -1470,6 +1470,7 @@ local AutoNextPortal = MakeCheckbox(Main_MainSubPage, 'Auto Next Portal', 0.056)
 local PlaceInRedZones = MakeCheckbox(Main_MainSubPage, 'Place In Red Zones', 0.056)
 local HideMap = MakeCheckbox(Main_MainSubPage, 'Hide Map', 0.056)
 local TPToLobby = MakeLargeButton(Main_MainSubPage, 'Teleport To Lobby', 0.103)
+local RedeemCodes = MakeLargeButton(Main_MainSubPage, 'Redeem All Codes', 0.103)
 
 -----------------------
 
@@ -2159,7 +2160,7 @@ HideUHLabel.BackgroundTransparency = 1
 HideUHLabel.Size = UDim2.new(0.796, 0, 0.8, 0)
 HideUHLabel.Font = Enum.Font.GothamBold
 HideUHLabel.TextScaled = true
-HideUHLabel.Text = 'Hide SkullHub'
+HideUHLabel.Text = 'Hide Interface'
 HideUHLabel.Position = UDim2.new(0, 0, 0.5, 0)
 HideUHLabel.AnchorPoint = Vector2.new(0, 0.5)
 HideUHLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -4286,6 +4287,20 @@ TPToLobby.MouseButton1Click:Connect(function()
 	TPLobby()
 end)
 
+local x2Code = {
+	"MERRYCHRISTMAS",
+	"HOLIDAYS2024"
+}
+
+RedeemCodes.MouseButton1Click:Connect(function()
+	function RedeemCode(value)
+		game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(value)
+	end
+	for i,v in pairs(x2Code) do
+		RedeemCode(v)
+	end
+end)
+
 local function getMapName (result)
 	local mapName = result
 
@@ -4509,7 +4524,7 @@ task.spawn(function()
 	pcall(function()
 
 		if queue_on_teleport then
-			local SkullHubScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/menshaha/AAMH/main/SkullHub.lua"))()'
+			local SkullHubScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/idksuss/nigga/main/lol"))()'
 			queue_on_teleport(SkullHubScript)
 		end
 
