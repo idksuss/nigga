@@ -1,4 +1,3 @@
-
 if not game:IsLoaded() then game.Loaded:Wait() end
 repeat task.wait() until game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name)
 
@@ -2333,7 +2332,7 @@ TestWebhook.MouseButton1Click:Connect(function()
 		["embeds"] = {
 
 			{
-				["title"] = 'Anime Adventures',
+				["title"] = 'Anime Adventures | Skull Hub',
 				['color'] = 3890389,
 				['footer'] = {
 					['text'] = string.format("by hungquan99 (%s)", Time), 
@@ -2341,7 +2340,7 @@ TestWebhook.MouseButton1Click:Connect(function()
 				['fields'] = {
 					{
 						['name'] = 'Test Webhook',
-						['value'] = 'Hello?'
+						['value'] = 'Hello? Skull Hub was here 🤓'
 					}
 				}
 
@@ -4485,7 +4484,7 @@ local function webhook ()
 		["embeds"] = {
 
 			{
-				["title"] = 'Anime Adventures',
+				["title"] = 'Anime Adventures | Skull Hub',
 				['color'] = 3890389,
 				["description"] = levelAndUser,
 				['footer'] = {
