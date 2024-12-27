@@ -4289,7 +4289,8 @@ end)
 
 local x2Code = {
 	"MERRYCHRISTMAS",
-	"HOLIDAYS2024"
+	"HOLIDAYS2024",
+	"MERRYCHRISTMAS2"
 }
 
 RedeemCodes.MouseButton1Click:Connect(function()
