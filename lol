@@ -1,3 +1,4 @@
+
 if not game:IsLoaded() then game.Loaded:Wait() end
 repeat task.wait() until game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name)
 
@@ -4290,7 +4291,9 @@ end)
 local x2Code = {
 	"MERRYCHRISTMAS",
 	"HOLIDAYS2024",
-	"MERRYCHRISTMAS2"
+	"MERRYCHRISTMAS2",
+	"SHUTDOWNCODE1230",
+	"2BILLIONAA"
 }
 
 RedeemCodes.MouseButton1Click:Connect(function()
