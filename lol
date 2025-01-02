@@ -1,3 +1,5 @@
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
+local Notify = AkaliNotif.Notify
 
 if not game:IsLoaded() then game.Loaded:Wait() end
 repeat task.wait() until game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name)
@@ -4289,10 +4291,6 @@ TPToLobby.MouseButton1Click:Connect(function()
 end)
 
 local x2Code = {
-	"MERRYCHRISTMAS",
-	"HOLIDAYS2024",
-	"MERRYCHRISTMAS2",
-	"SHUTDOWNCODE1230",
 	"2BILLIONAA"
 }
 
@@ -4303,10 +4301,20 @@ RedeemCodes.MouseButton1Click:Connect(function()
 	for i,v in pairs(x2Code) do
 		RedeemCode(v)
 	end
+	Notify({
+        Title = "Skull Hub",
+        Description = "Redeemed All Codes!",
+        Duration = 5
+    })
 end)
 
 Discordsv.MouseButton1Click:Connect(function()
 	setclipboard("https://discord.gg/NxHT2rSynR")
+	Notify({
+        Title = "Skull Hub",
+        Description = "Copied Discord Invite Link!",
+        Duration = 5
+    })
 	print('Skull Hub | Copied Discord Invite Link!')
 end)
 
